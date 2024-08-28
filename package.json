@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "bootstrap-vue-3": "^0.5.1",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-router": "^4.4.3"
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3",
+    "vuetify": "^3.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
