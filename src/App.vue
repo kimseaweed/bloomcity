@@ -21,7 +21,7 @@ export default {
     MainFooter,
 
   },
-  
+  compatConfig: { MODE: 3 }
 }
 </script>
 
