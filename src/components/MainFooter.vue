@@ -1,49 +1,48 @@
 <template>
   <footer>
     <div>
-        <div>
+        <div class="border-bottom">
             <div>
                 <p>dccommodations</p>
                 <ul>
-                    <li>일반객실</li>
-                    <li>스위트</li>
-                    <li>풀빌라</li>
-                    <li>라운지</li>
+                    <li><a>일반객실</a></li>
+                    <li><a>스위트</a></li>
+                    <li><a>풀빌라</a></li>
+                    <li><a>라운지</a></li>
                 </ul>
             </div>
             <div>
                 <p>dinning</p>
                 <ul>
-                    <li>파인다이닝</li>
-                    <li>카페&바</li>
+                    <li><a>파인다이닝</a></li>
+                    <li><a>카페&바</a></li>
                 </ul>
             </div>
             <div>
                 <p>fun&joy</p>
                 <ul>
-                    <li>레저시설</li>
-                    <li>부대시설</li>
+                    <li><a>레저시설</a></li>
+                    <li><a>부대시설</a></li>
                 </ul>
             </div>
             <div>
                 <p>meetiong</p>
                 <ul>
-                    <li>컨벤션</li>
-                    <li>웨딩</li>
+                  <li><a>컨벤션</a></li>
+                    <li><a>웨딩</a></li>
                 </ul>
             </div>
             <div>
                 <p>paradise city</p>
                 <ul>
-                    <li>파라다이스 시티</li>
-                    <li>오시는 길</li>
+                  <li><a>파라다이스 시티</a></li>
+                    <li><a>오시는 길</a></li>
                 </ul>
             </div>
         </div>
-        <hr>
         <div>
             <div>
-                <p>개인정보처리방침</p>
+                <p><a>개인정보처리방침</a></p>
                 <p>copyright @ openfield. all rights reserved.</p>
             </div>
         </div>

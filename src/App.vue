@@ -1,11 +1,7 @@
 <template>
   
   <MainHeader/>
-  <HomeVisual/>
-  <HomeContent1/>
-  <HomeContent2/>
-  <HomeContent3/>
-  <HomeContent4/>
+  <router-view/>
   <MainFooter/>
 
 </template>
@@ -14,11 +10,6 @@
 
 import MainHeader from './components/MainHeader.vue';
 import MainFooter from './components/MainFooter.vue';
-import HomeVisual from './components/HomeVisual.vue';
-import HomeContent1 from './components/HomeContent1.vue';
-import HomeContent2 from './components/HomeContent2.vue';
-import HomeContent3 from './components/HomeContent3.vue';
-import HomeContent4 from './components/HomeContent4.vue';
 
 export default {
   name: 'App',
@@ -28,11 +19,6 @@ export default {
   components: {
     MainHeader,
     MainFooter,
-    HomeVisual,
-    HomeContent1,
-    HomeContent2,
-    HomeContent3,
-    HomeContent4,
 
   },
   
