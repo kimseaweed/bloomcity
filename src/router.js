@@ -9,8 +9,17 @@ const routes = [
         component : HomePage,
     },
     {
-        path : "/accommondations",
+        path : "/accommodations",
         component : AccommodationsRooms,
+        child : [
+            {
+                path : "deluxe",
+                component : null,
+            },            {
+                path : "pooVilla",
+                component : null,
+            },
+        ]
     },
 ];
 

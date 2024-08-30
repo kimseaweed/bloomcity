@@ -7,7 +7,7 @@
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
         <li class="nav-item mx-4 text-uppercase fw-bold">
           <!-- @click="setActive(inex) -->
-          <router-link to="/" class="nav-link" >accoommdations</router-link>
+          <router-link to="/accommodations" class="nav-link" >accommodations</router-link>
         </li>
         <li class="nav-item mx-4 text-uppercase fw-bold">
           <a class="nav-link" href="#">dinning</a>
