@@ -6,7 +6,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
         <li class="nav-item mx-4 text-uppercase fw-bold">
+<<<<<<< HEAD
           <router-link to="/accommodations" class="nav-link" :class="{ 'navActive': isActive('/accommodations') }">accoommdations</router-link>
+=======
+          <!-- @click="setActive(inex) -->
+          <router-link to="/accommodations" class="nav-link" >accommodations</router-link>
+>>>>>>> 5445726ce14b97bdfc6fba4d8116880fca6184d6
         </li>
         <li class="nav-item mx-4 text-uppercase fw-bold">
           <a class="nav-link" href="#">dinning</a>
