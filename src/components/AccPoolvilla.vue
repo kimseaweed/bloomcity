@@ -1,5 +1,5 @@
 <template>
-  
+  풀빌라
 </template>
 
 <script>

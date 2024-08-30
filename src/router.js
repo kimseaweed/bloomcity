@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "./components/HomePage.vue";
 import AccommodationsRooms from "./components/AccommodationsRooms.vue";
+import AccDeluxe from "./components/AccDeluxe.vue";
+import AccPoolvilla from "./components/AccPoolvilla.vue";
 
 
 const routes = [
@@ -9,8 +11,19 @@ const routes = [
         component : HomePage,
     },
     {
-        path : "/accommondations",
+        path : "/accommodations",
         component : AccommodationsRooms,
+        redirect: '/accommodations/deluxe',
+        children : [
+            {
+                path : "deluxe",
+                component : AccDeluxe,
+            },
+            {
+                path : "poolvilla",
+                component : AccPoolvilla,
+            }
+        ]
     },
 ];
 

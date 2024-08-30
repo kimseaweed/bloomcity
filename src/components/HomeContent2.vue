@@ -21,9 +21,9 @@
           <div>
             <img src="@/assets/con2-2.png">
           </div>
-          <div class="bg-white  py-3">
-            <p>
-              <span class="text-uppercase">romm only</span> <br>
+          <div class="bg-white py-3">
+            <p class=" fw-medium">
+              <span class="text-uppercase fs-4">room only</span> <br>
               BLOOM CITY를 즐기는 완벽한 여행
             </p>
           </div>
@@ -33,8 +33,8 @@
             <img src="@/assets/con2-3.png">
           </div>
           <div class="bg-white py-3">
-            <p>
-              <span class="text-uppercase">one summer night</span> <br>
+            <p class=" fw-medium">
+              <span class="text-uppercase fs-4">one summer night</span> <br>
               더욱 특별해지는 당신의 여름밤
             </p>
           </div>
@@ -55,9 +55,20 @@ export default {
   background-color: rgb(243, 242, 242);
   color: rgb(70,70,70);
 }
-.homeCon2-title{
-   
+.homeCon2 .row .col{
+  border: 1px solid rgb(230, 230, 230);
+  padding: 0;
+  margin-left: 7px;
+  margin-right: 7px;
 }
+.homeCon2 .row .col>div{
+  transition: all 1s;
+}
+.homeCon2 .row .col:hover>div{
+  background-color: rgb(177, 150, 96) !important;
+  color: white;
+}
+
 .homeCon2 img{
   width: 100%;
   height: 550px;

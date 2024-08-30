@@ -6,8 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
         <li class="nav-item mx-4 text-uppercase fw-bold">
-          <!-- @click="setActive(inex) -->
-          <router-link to="/" class="nav-link" >accoommdations</router-link>
+          <router-link to="/accommodations" class="nav-link" :class="{ 'navActive': isActive('/accommodations') }">accoommdations</router-link>
         </li>
         <li class="nav-item mx-4 text-uppercase fw-bold">
           <a class="nav-link" href="#">dinning</a>
@@ -25,10 +24,6 @@
       <div class="d-flex">
         <div class="fs-2 mx-2"><a href="#" class="text-secondary"><i class="bi bi-person"></i></a></div>
         <div class="fs-2 mx-2"><a href="#" class="text-secondary"><i class="bi bi-search"></i></a></div>
-        <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
       </div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +36,19 @@
 </template>
 
 <script>
+import { useRoute } from 'vue-router';
+
+
+
 export default {
+  
+  methods : {
+    isActive(path) {
+      const route = useRoute();
+      return route.path.startsWith(path);
+    },
+  }
+
 
 }
 </script>
@@ -49,9 +56,7 @@ export default {
 <style>
 
 nav{
-  
   padding: 0;
-
   height: 120px;
 }
 .nav-item{
@@ -63,7 +68,7 @@ nav{
   !important;
   font-weight: 900;
 }
-.nav-link.active{
+.navActive{
   color : rgb(177, 150, 96)
   !important
 }

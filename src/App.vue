@@ -13,7 +13,10 @@ import MainFooter from './components/MainFooter.vue';
 
 export default {
   name: 'App',
-  datd(){
+  data(){
+    return{
+      data : null,
+    }
 
   },
   components: {
@@ -21,7 +24,19 @@ export default {
     MainFooter,
 
   },
-  compatConfig: { MODE: 3 }
+  created(){
+            this.$axios
+              .get(this.$serverUrl,{})
+              .then((res) => {
+                console.log(res.data);
+                this.data = res.data;
+              })
+              .catch((res) => {
+                console.log('실패')
+                console.error(res);
+              })
+  }
+  // compatConfig: { MODE: 3 }
 }
 </script>
 

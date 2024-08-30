@@ -3,7 +3,7 @@
     <div>
       <h3 class="text-uppercase display-5 fw-bold">accommodations</h3>
       <p>BLOOM CITY만의 예술적 품격을 갖춘 객실에서 격이 다른 휴식과 여유를 경험해보세요.</p>
-      <button class="text-uppercase mt-5 px-5 py-3">view more</button>
+      <router-link to="accommodations"><button class="text-uppercase mt-5 px-5 py-3">view more</button></router-link>
     </div>
   </section>
 </template>

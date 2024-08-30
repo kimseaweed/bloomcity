@@ -14,35 +14,35 @@
             <div class="flex-fill">
                 <p>dinning</p>
                 <ul>
-                    <li><a>파인다이닝</a></li>
-                    <li><a>카페&바</a></li>
+                    <li class="fontLight"><a>파인다이닝</a></li>
+                    <li class="fontLight"><a>카페&바</a></li>
                 </ul>
             </div>
             <div class="flex-fill">
                 <p>fun&joy</p>
                 <ul>
-                    <li><a>레저시설</a></li>
-                    <li><a>부대시설</a></li>
+                    <li class="fontLight"><a>레저시설</a></li>
+                    <li class="fontLight"><a>부대시설</a></li>
                 </ul>
             </div>
             <div class="flex-fill">
                 <p>meetiong</p>
                 <ul>
-                  <li><a>컨벤션</a></li>
-                    <li><a>웨딩</a></li>
+                    <li class="fontLight"><a>컨벤션</a></li>
+                    <li class="fontLight"><a>웨딩</a></li>
                 </ul>
             </div>
             <div class="flex-fill">
                 <p>paradise city</p>
                 <ul>
-                  <li><a>파라다이스 시티</a></li>
-                    <li><a>오시는 길</a></li>
+                    <li class="fontLight"><a>파라다이스 시티</a></li>
+                    <li class="fontLight"><a>오시는 길</a></li>
                 </ul>
             </div>
         </div>
         <div class="py-3 text-center">
             <div class="py-3">
-                <a>개인정보처리방침</a>
+                <a href="#" class="footerlink">개인정보처리방침</a>
             </div>
                 <p class="fontLight">copyright @ openfield. all rights reserved.</p>
         </div>
@@ -81,6 +81,13 @@ footer>div>div>div>p{
 }
 .footer-menu li{
     margin-top: 7px;
+}
+.footer-menu li:hover{
+    font-weight: bold;
+}
+.footerlink{
+    color: white;
+    text-decoration: none;
 }
 
 </style>

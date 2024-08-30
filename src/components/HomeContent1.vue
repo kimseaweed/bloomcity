@@ -54,10 +54,15 @@ export default {
 .homeCon1-subs button{
   font-size: 14px;
   background-color: rgb(177, 150, 96);
-  border: none;
+  border: 1px solid transparent;
   color: white;
   width: max-content;
-
+  transition: all 1s;
+}
+.homeCon1-subs button:hover{
+  border: rgb(177, 150, 96) 1px solid;
+  background-color: transparent;
+  color: rgb(177, 150, 96);
 }
 
 </style>
