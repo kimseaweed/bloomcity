@@ -1,44 +1,14 @@
 <template>
   <footer>
-    <div class="footer-wrapper container py-5">
-        <div class="footer-menu d-flex px-5 mx-5">
-            <div class="flex-fill">
-                <p>dccommodations</p>
+    <div class="footer-wrapper container-lg py-5">
+        <div class="footer-menu d-flex px-xl-5 mx-xl-5 mx-md-0 px-md-0 flex-md-row flex-column">
+            <div class="flex-fill " v-for="menuitems in nav" :key="menuitems">
+                <p>{{ menuitems.subject}}</p>
                 <ul>
-                    <li class="fontLight"><a>일반객실</a></li>
-                    <li class="fontLight"><a>스위트</a></li>
-                    <li class="fontLight"><a>풀빌라</a></li>
-                    <li class="fontLight"><a>라운지</a></li>
+                    <li class="" v-for="menuitem in menuitems.menuItems" :key="menuitem"><router-link :to="menuitem.menuPath">{{ menuitem.menuName }}</router-link></li>
                 </ul>
             </div>
-            <div class="flex-fill">
-                <p>dinning</p>
-                <ul>
-                    <li class="fontLight"><a>파인다이닝</a></li>
-                    <li class="fontLight"><a>카페&바</a></li>
-                </ul>
-            </div>
-            <div class="flex-fill">
-                <p>fun&joy</p>
-                <ul>
-                    <li class="fontLight"><a>레저시설</a></li>
-                    <li class="fontLight"><a>부대시설</a></li>
-                </ul>
-            </div>
-            <div class="flex-fill">
-                <p>meetiong</p>
-                <ul>
-                    <li class="fontLight"><a>컨벤션</a></li>
-                    <li class="fontLight"><a>웨딩</a></li>
-                </ul>
-            </div>
-            <div class="flex-fill">
-                <p>paradise city</p>
-                <ul>
-                    <li class="fontLight"><a>파라다이스 시티</a></li>
-                    <li class="fontLight"><a>오시는 길</a></li>
-                </ul>
-            </div>
+            
         </div>
         <div class="py-3 text-center">
             <div class="py-3">
@@ -51,8 +21,15 @@
 </template>
 
 <script>
-export default {
 
+export default {
+    props : {
+        nav : Array,
+    },
+    data() {
+        return {
+        }
+    },
 }
 </script>
 
@@ -70,9 +47,6 @@ footer>div>div>div>p{
     margin: 0;
     padding: 0;
 }
-.fontLight{
-    color: rgba(255,255,255,0.6);
-}
 .footer-menu{
     padding: 30px;
 }
@@ -82,9 +56,18 @@ footer>div>div>div>p{
 .footer-menu li{
     margin-top: 7px;
 }
-.footer-menu li:hover{
-    font-weight: bold;
+.footer-menu li a{
+    color: rgba(255,255,255,0.6);
 }
+.footer-menu li a:hover{
+    font-weight: bold;
+    cursor:pointer;
+}
+@media (max-width: 756px) {
+    .footer-menu{
+        text-align: center;
+    }
+  }
 .footerlink{
     color: white;
     text-decoration: none;

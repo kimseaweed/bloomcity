@@ -20,7 +20,7 @@ export default {
   HomeContent2,
   HomeVisual,
   HomeContent1,
-  }
+  },
 }
 </script>
 

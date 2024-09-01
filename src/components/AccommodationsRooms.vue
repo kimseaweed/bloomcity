@@ -1,54 +1,78 @@
 <template>
-<<<<<<< HEAD
-  <section class="accVisual text-center">
-    <h2>DELUXE</h2>
-    <p>모던하면서도 아늑한 인테리어의 디럭스 폼</p>
+  <section class="accVisual text-center text-white position-relative">
+    <div class="position-absolute start-50 translate-middle-x">
+      <h2 class="text-uppercase display-3 fw-bold"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >{{currentPath}}</h2>
+      <p
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+      >모던하면서도 아늑한 인테리어의 디럭스 폼</p>
+    </div>
   </section>
-  <section class="container">
-    <nav>
+  <section class="accSection container">
+    <nav class="mx-auto my-5">
       <ul class="row">
-        <li class="col">
-          <router-link to="/accommodations/deluxe">일반객실</router-link>
-        </li>
-        <li class="col">
-          <router-link>스위트</router-link>
-        </li>
-        <li class="col">
-          <router-link to="/accommodations/poolvilla">풀빌라</router-link>
-        </li>
-        <li class="col">
-          <router-link>라운지</router-link>
+        <li class="col fw-bold" v-for="menu in nav[0].menuItems" :key="menu">
+          <router-link 
+          :to="menu.menuPath" @click="changePath(menu.menuPath)"
+          active-class="navActive">
+            {{ menu.menuName }}
+          </router-link>
         </li>
       </ul>
     </nav>
-    <router-view/>
-    acc끝
-=======
-  <section>
-  //비주얼
-    //네브
-    <router-view>
-
-    </router-view>
->>>>>>> 5445726ce14b97bdfc6fba4d8116880fca6184d6
+      <router-view 
+      data-aos="fade-up"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="flase"
+      />
   </section>
 </template>
 
 <script>
 
-//데이터를 현재페이지에서 다 불러옴,
-// 비주얼부분은 바로 표시하고 방정보는 라우터로 보냄
-
 export default {
-  components: {
-  }
+    props : {
+        nav : Array,
+    },
+    data(){
+      return {
+        currentPath : 'deluxe',
+        menupath : '/accommodations/deluxe',
+      }
+    },
+    methods : {
+      changePath(path) {
+        this.currentPath = path.replace(/^\/accommodations\/?/, '');
+      },
 
+    }
 }
 </script>
 
 <style>
 .accVisual{
-  
+  background: url('@/assets/AccVisual.png') no-repeat center / cover ;
+  height: 550px;
 }
+.accVisual>div{
+  top: 43%;
+}
+.accSection a{
+ color: black;
+}
+.accSection nav{
+  font-size : 16px ;
+  width: 530px;
+}@media (max-width: 756px) {
+  .accSection nav{
+    width : 100%
+  }
 
+}
 </style>

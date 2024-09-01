@@ -1,8 +1,8 @@
 <template>
   
-  <MainHeader/>
-  <router-view/>
-  <MainFooter/>
+  <MainHeader :nav="nav"/>
+  <router-view :nav="nav" />
+  <MainFooter :nav="nav"/>
 
 </template>
 
@@ -13,30 +13,29 @@ import MainFooter from './components/MainFooter.vue';
 
 export default {
   name: 'App',
-  data(){
+  beforeMount(){
+            this.$axios
+              .get(this.$serverUrl+"/ui/nav",{})
+              .then((res) => {
+                this.nav = res.data;
+                console.log(res.data);
+              })
+              .catch((res) => {
+                console.log('통신실패')
+                console.error(res);
+              });
+  },
+  data()  {
     return{
-      data : null,
+        nav : null,
     }
-
   },
   components: {
     MainHeader,
     MainFooter,
 
   },
-  created(){
-            this.$axios
-              .get(this.$serverUrl,{})
-              .then((res) => {
-                console.log(res.data);
-                this.data = res.data;
-              })
-              .catch((res) => {
-                console.log('실패')
-                console.error(res);
-              })
-  }
-  // compatConfig: { MODE: 3 }
+
 }
 </script>
 
@@ -48,8 +47,12 @@ export default {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
 }
 ul>li{
   list-style: none;
+}
+a{
+  text-decoration: none !important;
 }
 </style>

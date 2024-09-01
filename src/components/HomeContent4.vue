@@ -1,24 +1,34 @@
 <template>
   <section class="homeCon4 text-center position-relative pt-4">
     <div class="homeCon4-title">
-      <h3 class="text-uppercase display-5 pt-3 fw-bold">contact us</h3>
-      <p>언제나 설레는 길, BLOOM CITY 오시는 길을 안내해 드립니다.</p>
+      <h3 class="text-uppercase display-5 pt-3 fw-bold"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="0">contact us</h3>
+      <p
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="10">언제나 설레는 길, BLOOM CITY 오시는 길을 안내해 드립니다.</p>
     </div>
     <div class="container">
-      <div class="homeCon4-subs row row-cols-3 p-5">
-        <div class="col pt-4">
+      <div class="homeCon4-subs row row-cols-3 p-5"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+      >
+        <div class="col-12 col-sm-4 pt-4">
           <div class="homeCon4-icon mx-auto">
             <i class="bi bi-geo-alt-fill"></i>
           </div>
           <p class="pt-4">서울특별시 마포구 영화로10길 15 I.O빌딩 4층</p>
         </div>
-        <div class="col pt-4">
+        <div class="col-12 col-sm-4 pt-4">
           <div class="homeCon4-icon mx-auto">
             <i class="bi bi-flag-fill"></i>
           </div>
           <p class="pt-4">서울특별시 마포구 서교동 395-171</p>
         </div>
-        <div class="col pt-4">
+        <div class="col-12 col-sm-4 pt-4">
           <div class="homeCon4-icon mx-auto">
             <i class="bi bi-telephone-fill"></i>
           </div>
@@ -79,10 +89,12 @@ script.onload = () => {
   font-size: 14px;
   position: relative;
   top: 150px;
-  z-index: 9999;
+  z-index: 9;
 }
-.homeCon4-subs>div:nth-child(n+2){
-  border-left: 1px solid rgba(255,255,255,0.3);
+@media (min-width: 756px) {
+  .homeCon4-subs>div:nth-child(n+2){
+    border-left: 1px solid rgba(255,255,255,0.3);
+  }
 }
 .homeCon4-subs p{
   font-size: 16px;

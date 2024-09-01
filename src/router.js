@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage.vue";
 import AccommodationsRooms from "./components/AccommodationsRooms.vue";
 import AccDeluxe from "./components/AccDeluxe.vue";
 import AccPoolvilla from "./components/AccPoolvilla.vue";
+import NotFound from "./components/NotFound.vue";
 
 
 const routes = [
@@ -13,7 +14,6 @@ const routes = [
     {
         path : "/accommodations",
         component : AccommodationsRooms,
-<<<<<<< HEAD
         redirect: '/accommodations/deluxe',
         children : [
             {
@@ -23,18 +23,23 @@ const routes = [
             {
                 path : "poolvilla",
                 component : AccPoolvilla,
-            }
-=======
-        child : [
-            {
-                path : "deluxe",
-                component : null,
-            },            {
-                path : "pooVilla",
-                component : null,
             },
->>>>>>> 5445726ce14b97bdfc6fba4d8116880fca6184d6
+            {
+                path: ':pathMatch(.*)*',
+                redirect : "/notfound"
+            },
         ]
+    },
+
+
+    //그외의path
+    {    
+        path : "/notfound",
+        component : NotFound,
+    },
+    {
+        path : "/:pathMath(.*)*",
+        redirect : "/notfound"
     },
 ];
 
