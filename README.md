@@ -29,8 +29,10 @@ BootstrapVue / AOS <br><br>
 
 # npm install
 ``npm install -g vue``<br>
+``npm install vue-router``<br>
 ``npm install axios``<br>
-``npm install vue-router``
+``npm install --save aos@next``<br>
+``npm install i bootstrap@5.3.3``<br>
 
 <br>
 
