@@ -18,8 +18,6 @@ vue.js를 연습한 내용을 바탕으로 프로젝트를 진행해보았습니
 https://github.com/kimseaweed/bloomcity_server 
 <br> <br>
 
-
-
 # 🔧 사용 스택
 - Vue.js<br>
 vue-router / axios<br><br>
@@ -28,6 +26,11 @@ api연동 테스트를 위해 하드코딩으로 간단하게 제작<br><br>
 - Library<br>
 BootstrapVue / AOS <br><br>
 - 네이버지도API
+
+# npm install
+``npm install -g vue``<br>
+``npm install axios``<br>
+``npm install vue-router``
 
 <br>
 
