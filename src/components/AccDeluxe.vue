@@ -1,8 +1,8 @@
 <template>
   <article class="deluxe container row d-flex pb-5 mb-5">
     <section class="deluxeImg col-12 col-xl-8 row row-cols-2 ms-2">
-      <div class="col p-1"><img class="" src="@/assets/AccDeluxe0.png" alt="객실안에 침대가 두개"></div>
-      <div class="col p-1"><img class="" src="@/assets/AccDeluxe1.png" alt="바다가 보이는 수영장"></div>
+      <div class="col p-1"><img src="@/assets/AccDeluxe0.png" alt="객실안에 침대가 두개"></div>
+      <div class="col p-1"><img src="@/assets/AccDeluxe1.png" alt="바다가 보이는 수영장"></div>
       <div class="col p-1"><img src="@/assets/AccDeluxe2.png" alt="바다가 보이는 조"></div>
       <div class="col p-1"><img src="@/assets/AccDeluxe3.png" alt="아침식사 서비스"></div>
     </section>
@@ -58,6 +58,11 @@ export default {
   .deluxeImg img{
     width: 100%;
   }
+.deluxeImg div:nth-child(1),
+.deluxeImg div:nth-child(2)
+{
+  align-content: end;
+}
   .deluxe h5{
     font-size: 18px;
     font-weight: 800;
